@@ -1,0 +1,23 @@
+17:19:46 **** Incremental Build of configuration Debug for project led7seg ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "led7seg.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\acer\OneDrive - Hanoi University of Science and Technology\NAM_4\KY_1\Design_embedded_system\workspace\led7seg\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="led7seg.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: led7seg.elf
+ 
+arm-none-eabi-size   led7seg.elf 
+arm-none-eabi-objdump -h -S  led7seg.elf  > "led7seg.list"
+arm-none-eabi-objcopy  -O ihex  led7seg.elf  "led7seg.hex"
+arm-none-eabi-objcopy  -O binary  led7seg.elf  "led7seg.bin"
+   text	   data	    bss	    dec	    hex	filename
+   4572	     32	   1568	   6172	   181c	led7seg.elf
+Finished building: default.size.stdout
+ 
+Finished building: led7seg.hex
+Finished building: led7seg.bin
+Finished building: led7seg.list
+ 
+ 
+ 
+
+17:19:50 Build Finished. 0 errors, 0 warnings. (took 3s.726ms)
+

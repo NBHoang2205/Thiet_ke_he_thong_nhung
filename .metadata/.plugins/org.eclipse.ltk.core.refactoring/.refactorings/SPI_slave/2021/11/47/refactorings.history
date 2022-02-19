@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SPI_slave/SPI_master.ioc&apos; to &apos;SPI_slave.ioc&apos;" description="Rename resource &apos;SPI_master.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="SPI_master.ioc" name="SPI_slave.ioc" stamp="1637290869311" updateReferences="true"/>
+</session>

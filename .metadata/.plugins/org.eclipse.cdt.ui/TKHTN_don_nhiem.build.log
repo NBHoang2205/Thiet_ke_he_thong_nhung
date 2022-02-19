@@ -1,0 +1,25 @@
+15:31:31 **** Incremental Build of configuration Debug for project TKHTN_don_nhiem ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/DS18B20.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/DS18B20.d" -MT"Core/Src/DS18B20.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/DS18B20.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/DS18B20.c: In function 'DS18B20_Start':
+../Core/Src/DS18B20.c:35:2: warning: implicit declaration of function 'Delay_us' [-Wimplicit-function-declaration]
+   35 |  Delay_us(480);
+      |  ^~~~~~~~
+arm-none-eabi-gcc -o "TKHTN_don_nhiem.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\acer\OneDrive - Hanoi University of Science and Technology\NAM_4\KY_1\Design_embedded_system\workspace\TKHTN_don_nhiem\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TKHTN_don_nhiem.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TKHTN_don_nhiem.elf
+ 
+arm-none-eabi-size   TKHTN_don_nhiem.elf 
+arm-none-eabi-objdump -h -S  TKHTN_don_nhiem.elf  > "TKHTN_don_nhiem.list"
+arm-none-eabi-objcopy  -O binary  TKHTN_don_nhiem.elf  "TKHTN_don_nhiem.bin"
+   text	   data	    bss	    dec	    hex	filename
+  25356	    484	   1740	  27580	   6bbc	TKHTN_don_nhiem.elf
+Finished building: default.size.stdout
+ 
+Finished building: TKHTN_don_nhiem.bin
+ 
+Finished building: TKHTN_don_nhiem.list
+ 
+
+15:31:35 Build Finished. 0 errors, 1 warnings. (took 3s.840ms)
+

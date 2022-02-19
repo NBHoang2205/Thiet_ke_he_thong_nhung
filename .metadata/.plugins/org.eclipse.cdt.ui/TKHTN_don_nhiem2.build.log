@@ -1,0 +1,10 @@
+15:31:56 **** Incremental Build of configuration Debug for project TKHTN_don_nhiem2 ****
+make -j8 all 
+arm-none-eabi-size   TKHTN_don_nhiem2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26652	    484	   1740	  28876	   70cc	TKHTN_don_nhiem2.elf
+Finished building: default.size.stdout
+ 
+
+15:31:56 Build Finished. 0 errors, 0 warnings. (took 531ms)
+

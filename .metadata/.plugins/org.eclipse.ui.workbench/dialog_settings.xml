@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ImportExportAction">
+		<item key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID" value="org.eclipse.ui.wizards.import.ExternalProject"/>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
+		</list>
+	</section>
+	<section name="FileSystemImportWizard">
+		<item key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID" value="false"/>
+		<item key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID" value="false"/>
+		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="C:\Users\acer\OneDrive - Hanoi University of Science and Technology\NAM_3\embeded\HOC_stm32\Code\STM32Cube_FW_F1_V1.8.0\Drivers\STM32F1xx_HAL_Driver\Src"/>
+			<item value="C:\Users\acer\OneDrive - Hanoi University of Science and Technology\NAM_3\embeded\HOC_stm32\Code\STM32Cube_FW_F1_V1.8.0\Drivers\STM32F1xx_HAL_Driver\Inc"/>
+			<item value="C:\Users\acer\OneDrive - Hanoi University of Science and Technology\NAM_3\embeded\HOC_stm32\Code\STM32Cube_FW_F1_V1.8.0\Drivers\CMSIS\Device\ST\STM32F1xx\Include"/>
+			<item value="C:\Users\acer\OneDrive - Hanoi University of Science and Technology\NAM_3\embeded\HOC_stm32\Code\STM32Cube_FW_F1_V1.8.0\Drivers\CMSIS\Include"/>
+		</list>
+	</section>
+</section>

@@ -1,0 +1,23 @@
+22:50:06 **** Incremental Build of configuration Debug for project SPI_slave ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "SPI_slave.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\acer\OneDrive - Hanoi University of Science and Technology\NAM_4\KY_1\Design_embedded_system\workspace\SPI_slave\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SPI_slave.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SPI_slave.elf
+ 
+arm-none-eabi-size   SPI_slave.elf 
+arm-none-eabi-objdump -h -S  SPI_slave.elf  > "SPI_slave.list"
+arm-none-eabi-objcopy  -O ihex  SPI_slave.elf  "SPI_slave.hex"
+arm-none-eabi-objcopy  -O binary  SPI_slave.elf  "SPI_slave.bin"
+   text	   data	    bss	    dec	    hex	filename
+   8760	     20	   1732	  10512	   2910	SPI_slave.elf
+Finished building: default.size.stdout
+ 
+Finished building: SPI_slave.bin
+Finished building: SPI_slave.list
+Finished building: SPI_slave.hex
+ 
+ 
+ 
+
+22:50:08 Build Finished. 0 errors, 0 warnings. (took 2s.258ms)
+
