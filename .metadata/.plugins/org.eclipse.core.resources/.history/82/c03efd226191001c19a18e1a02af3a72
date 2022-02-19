@@ -107,8 +107,6 @@ int main(void)
 	  temp = DS18B20_ReadTemp(&DS);
 	  printf("temp = %f\n", temp);
 	  HAL_Delay(2000);
-
-
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
