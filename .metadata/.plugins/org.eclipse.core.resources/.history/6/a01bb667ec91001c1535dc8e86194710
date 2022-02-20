@@ -1,0 +1,71 @@
+/*
+ * Motor.c
+ *
+ *  Created on: Feb 19, 2022
+ *      Author: Nguyen_Ba_Hoang_20181486
+ */
+
+#include "Motor.h"
+/*************************************************************************************************/
+
+/**
+  * @brief Init motor
+  * @param	Timer,channel for PWM_PIN;
+  * 		duty: Duty cycle of PWM
+  * 		frequency: frequency of PWM
+  * @retval None
+  */
+
+void Motor_Init(Motor_Name* Motor, TIM_HandleTypeDef* Timer, uint32_t Channel, 	uint32_t frequency, uint8_t duty)
+{
+	Motor->Timer_PWM = Timer;
+	Motor->Channel_PWM = Channel;
+	//Start Timer
+	HAL_TIM_PWM_Start(Timer, Channel);
+	Motor_Set_Duty(Motor, duty);
+	Motor_Set_Frequency(Motor, frequency);
+}
+
+/**
+  * @brief Init Encoder for measure motor speed
+  * @param	Timer,channel for Encoder
+  *
+  * @retval None
+  */
+void Motor_Init_Encoder(Motor_Name* Motor, TIM_HandleTypeDef* Timer, uint32_t Channel)
+{
+	Motor->Timer_Encoder = Timer;
+	Motor->Channel_Encoder = Channel;
+	HAL_TIM_Encoder_Start(Timer, Channel);
+}
+/**
+  * @brief Set duty cycle for PWM
+  * @param Duty(%) 0 -> 100. % High voltage
+  * @retval None
+  */
+void Motor_Set_Duty(Motor_Name* Motor,uint8_t duty)
+{
+	if(duty > DUTY_MAX)
+		duty = DUTY_MAX;
+	if(duty <= DUTY_MIN)
+		duty = 0;
+
+	Motor->duty = duty;
+	uint16_t compare = (Motor->Timer_PWM->Init.Period + 1) * duty / 100;
+	__HAL_TIM_SET_COMPARE(Motor->Timer_PWM, Motor->Channel_PWM, compare);
+}
+
+/**
+  * @brief Set frequency for PWM
+  * @param frequency(Hz); should  2 < f < 10000
+  * @retval None
+  */
+void Motor_Set_Frequency(Motor_Name* Motor, uint32_t frequency)
+{
+	// frequency = f_timer / [(Period + 1) * (Psc + 1)]
+	// -> Psc = f_timer / ((period + 1)*frequency) - 1;
+	Motor->frequency = frequency;
+	uint32_t period = Motor->Timer_PWM->Init.Period;
+	uint32_t f_timer = HAL_RCC_GetHCLKFreq();
+	TIM2->PSC = f_timer / ((period + 1) * frequency) - 1;
+}

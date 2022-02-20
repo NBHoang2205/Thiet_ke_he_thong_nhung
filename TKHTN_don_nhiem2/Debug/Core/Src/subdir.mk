@@ -6,6 +6,7 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../Core/Src/DS18b20.c \
+../Core/Src/Motor.c \
 ../Core/Src/delay_timer.c \
 ../Core/Src/main.c \
 ../Core/Src/stm32f1xx_hal_msp.c \
@@ -16,6 +17,7 @@ C_SRCS += \
 
 OBJS += \
 ./Core/Src/DS18b20.o \
+./Core/Src/Motor.o \
 ./Core/Src/delay_timer.o \
 ./Core/Src/main.o \
 ./Core/Src/stm32f1xx_hal_msp.o \
@@ -26,6 +28,7 @@ OBJS += \
 
 C_DEPS += \
 ./Core/Src/DS18b20.d \
+./Core/Src/Motor.d \
 ./Core/Src/delay_timer.d \
 ./Core/Src/main.d \
 ./Core/Src/stm32f1xx_hal_msp.d \

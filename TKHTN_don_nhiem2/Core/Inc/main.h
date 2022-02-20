@@ -64,6 +64,10 @@ void Error_Handler(void);
 #define LED_GPIO_Port GPIOC
 #define PWM_Pin GPIO_PIN_3
 #define PWM_GPIO_Port GPIOA
+#define TI1_Encoder_Pin GPIO_PIN_6
+#define TI1_Encoder_GPIO_Port GPIOA
+#define TI2_Encoder_Pin GPIO_PIN_7
+#define TI2_Encoder_GPIO_Port GPIOA
 #define DS18b20_Pin GPIO_PIN_1
 #define DS18b20_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */

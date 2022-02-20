@@ -11,10 +11,10 @@
 		<item key="askReindex.detail" value="0"/>
 	</section>
 	<section name="org.eclipse.cdt.ui.OPEN_ACTION_SELECTION_DIALOG_SECTION">
-		<item key="DIALOG_X_ORIGIN" value="548"/>
-		<item key="DIALOG_Y_ORIGIN" value="211"/>
+		<item key="DIALOG_X_ORIGIN" value="-39"/>
+		<item key="DIALOG_Y_ORIGIN" value="79"/>
 		<item key="DIALOG_WIDTH" value="1228"/>
-		<item key="DIALOG_HEIGHT" value="711"/>
+		<item key="DIALOG_HEIGHT" value="810"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 	<section name="CResourceRenameRefactoringInputPage">
@@ -27,5 +27,9 @@
 			<item value="osDelay"/>
 			<item value="osdelay"/>
 		</list>
+	</section>
+	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration.internal">
+		<item key="size.width" value="640"/>
+		<item key="size.height" value="180"/>
 	</section>
 </section>

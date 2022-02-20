@@ -1,0 +1,44 @@
+/*
+ * Motor.c
+ *
+ *  Created on: Feb 19, 2022
+ *      Author: Nguyen_Ba_Hoang_20181486
+ */
+
+#include "Motor.h"
+/*************************************************************************************************/
+void Motor_Init(Motor_Name* Motor, TIM_HandleTypeDef* Timer, uint32_t Channel)
+{
+	Motor->Timer = Timer;
+	Motor->Channel = Channel;
+	//Start Timer
+	if (HAL_TIM_PWM_Start(Motor->Timer, Motor->Channel) != HAL_OK)
+	{
+		Error_Handler();
+	}
+}
+
+/**
+  * @brief Set duty cycle for PWM
+  * @param Duty(%) 0 -> 100. % High voltage
+  * @retval None
+  */
+void Motor_Set_Duty(Motor_Name* Motor,uint8_t duty)
+{
+	uint16_t compare = (Motor->Timer->Init.Period + 1) * duty / 100;
+	__HAL_TIM_SET_COMPARE(Motor->Timer, Motor->Channel, compare);
+}
+
+/**
+  * @brief Set frequency for PWM
+  * @param frequency(Hz); should  2 < f < 10000
+  * @retval None
+  */
+void Motor_Set_Frequency(Motor_Name* Motor, uint32_t frequency)
+{
+	// frequency = f_timer / [(Period + 1) * (Psc + 1)]
+	// -> Psc = f_timer / ((period + 1)*frequency) - 1;
+	uint32_t period = Motor->Timer->Init.Period;
+	uint32_t f_timer = HAL_RCC_GetPCLK1Freq() * 1; 	 //1 is APB1 time multiplier value
+	TIM2->PSC = f_timer / ((period + 1) * frequency) - 1;
+}
