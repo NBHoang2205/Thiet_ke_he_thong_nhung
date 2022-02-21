@@ -11,7 +11,7 @@
 		<item key="askReindex.detail" value="0"/>
 	</section>
 	<section name="org.eclipse.cdt.ui.OPEN_ACTION_SELECTION_DIALOG_SECTION">
-		<item key="DIALOG_X_ORIGIN" value="-39"/>
+		<item key="DIALOG_X_ORIGIN" value="11"/>
 		<item key="DIALOG_Y_ORIGIN" value="79"/>
 		<item key="DIALOG_WIDTH" value="1228"/>
 		<item key="DIALOG_HEIGHT" value="810"/>
@@ -24,6 +24,7 @@
 		<item key="caseSensitive" value="false"/>
 		<item key="searchFlags" value="227191"/>
 		<list key="previousPatterns">
+			<item value="get_period_from_uart"/>
 			<item value="osDelay"/>
 			<item value="osdelay"/>
 		</list>

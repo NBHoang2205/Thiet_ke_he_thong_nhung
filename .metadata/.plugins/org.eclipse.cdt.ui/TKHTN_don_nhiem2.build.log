@@ -1,10 +1,6 @@
-10:06:04 **** Incremental Build of configuration Debug for project TKHTN_don_nhiem2 ****
+07:41:34 **** Incremental Build of configuration Debug for project TKHTN_don_nhiem2 ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-In file included from ../Core/Src/main.c:27:
-../Core/Inc/Motor.h:45:17: warning: 'caculate_speed' declared 'static' but never defined [-Wunused-function]
-   45 | static uint16_t caculate_speed(uint16_t pre_counter, uint16_t old_counter);
-      |                 ^~~~~~~~~~~~~~
 arm-none-eabi-gcc -o "TKHTN_don_nhiem2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\acer\OneDrive - Hanoi University of Science and Technology\NAM_4\KY_1\Design_embedded_system\workspace\TKHTN_don_nhiem2\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TKHTN_don_nhiem2.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: TKHTN_don_nhiem2.elf
  
@@ -13,15 +9,15 @@ arm-none-eabi-objdump -h -S  TKHTN_don_nhiem2.elf  > "TKHTN_don_nhiem2.list"
 arm-none-eabi-objcopy  -O ihex  TKHTN_don_nhiem2.elf  "TKHTN_don_nhiem2.hex"
 arm-none-eabi-objcopy  -O binary  TKHTN_don_nhiem2.elf  "TKHTN_don_nhiem2.bin"
    text	   data	    bss	    dec	    hex	filename
-  30252	    484	   1940	  32676	   7fa4	TKHTN_don_nhiem2.elf
+  29796	    484	   1948	  32228	   7de4	TKHTN_don_nhiem2.elf
 Finished building: default.size.stdout
  
-Finished building: TKHTN_don_nhiem2.hex
 Finished building: TKHTN_don_nhiem2.bin
+Finished building: TKHTN_don_nhiem2.hex
  
  
 Finished building: TKHTN_don_nhiem2.list
  
 
-10:06:07 Build Finished. 0 errors, 1 warnings. (took 3s.192ms)
+07:41:37 Build Finished. 0 errors, 0 warnings. (took 2s.610ms)
 

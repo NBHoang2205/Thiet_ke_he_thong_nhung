@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;TKHTN_don_nhiem_not_HSE/TKHTN_don_nhiem2.ioc&apos; to &apos;TKHTN_don_nhiem_not_HSE.ioc&apos;" description="Rename resource &apos;TKHTN_don_nhiem2.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="TKHTN_don_nhiem2.ioc" name="TKHTN_don_nhiem_not_HSE.ioc" stamp="1645373959673" updateReferences="true"/>
+</session>

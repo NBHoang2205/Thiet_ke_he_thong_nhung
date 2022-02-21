@@ -1,6 +1,0 @@
-DS18B20.c:11:6:Set_Pin_Output	32	static
-DS18B20.c:21:6:Set_Pin_Input	32	static
-DS18B20.c:31:9:DS18B20_Start	16	static
-DS18B20.c:50:6:DS18B20_Write	24	static
-DS18B20.c:79:9:DS18B20_Read	16	static
-DS18B20.c:98:7:DS18B20_Temp	24	static

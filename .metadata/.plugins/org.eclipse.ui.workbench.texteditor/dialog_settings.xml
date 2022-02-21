@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="RCC_APB1_APB2_Clock_Source"/>
+		<item key="selection" value="get_int_from_uart"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="get_period_from_uart"/>
 			<item value="RCC_APB1_APB2_Clock_Source"/>
 			<item value="TIM_FLAG_UPDATE"/>
 			<item value="HAL_SPI_RxCpltCallback"/>
@@ -20,6 +21,7 @@
 			<item value="GPIO_pins_define"/>
 		</list>
 		<list key="replacehistory">
+			<item value="get_int_from_uart"/>
 			<item value=""/>
 		</list>
 	</section>

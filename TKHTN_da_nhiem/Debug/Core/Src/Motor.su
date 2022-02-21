@@ -1,0 +1,7 @@
+Motor.c:25:6:Motor_Init_PWM	24	static
+Motor.c:41:6:Motor_Init_Encoder	24	static
+Motor.c:52:6:Motor_Set_Duty	24	static
+Motor.c:69:6:Motor_Set_Frequency	24	static
+Motor.c:84:10:Motor_Get_Speed	16	static
+Motor.c:95:6:HAL_SYSTICK_Callback	8	static
+Motor.c:110:17:caculate_speed	16	static

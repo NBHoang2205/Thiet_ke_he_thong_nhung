@@ -1,0 +1,22 @@
+23:23:37 **** Incremental Build of configuration Debug for project TKHTN_don_nhiem_not_HSE ****
+make -j8 all 
+arm-none-eabi-gcc -o "TKHTN_don_nhiem_not_HSE.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\acer\OneDrive - Hanoi University of Science and Technology\NAM_4\KY_1\Design_embedded_system\workspace\TKHTN_don_nhiem_not_HSE\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TKHTN_don_nhiem_not_HSE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TKHTN_don_nhiem_not_HSE.elf
+ 
+arm-none-eabi-size   TKHTN_don_nhiem_not_HSE.elf 
+arm-none-eabi-objdump -h -S  TKHTN_don_nhiem_not_HSE.elf  > "TKHTN_don_nhiem_not_HSE.list"
+arm-none-eabi-objcopy  -O ihex  TKHTN_don_nhiem_not_HSE.elf  "TKHTN_don_nhiem_not_HSE.hex"
+   text	   data	    bss	    dec	    hex	filename
+  29556	    484	   1948	  31988	   7cf4	TKHTN_don_nhiem_not_HSE.elf
+arm-none-eabi-objcopy  -O binary  TKHTN_don_nhiem_not_HSE.elf  "TKHTN_don_nhiem_not_HSE.bin"
+Finished building: default.size.stdout
+ 
+Finished building: TKHTN_don_nhiem_not_HSE.hex
+Finished building: TKHTN_don_nhiem_not_HSE.bin
+ 
+ 
+Finished building: TKHTN_don_nhiem_not_HSE.list
+ 
+
+23:23:39 Build Finished. 0 errors, 0 warnings. (took 1s.751ms)
+

@@ -1,0 +1,27 @@
+13:41:13 **** Incremental Build of configuration Debug for project TKHTN_da_nhiem ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:28:
+../Core/Inc/Motor.h:45:17: warning: 'caculate_speed' declared 'static' but never defined [-Wunused-function]
+   45 | static uint16_t caculate_speed(uint16_t pre_counter, uint16_t old_counter);
+      |                 ^~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "TKHTN_da_nhiem.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\acer\OneDrive - Hanoi University of Science and Technology\NAM_4\KY_1\Design_embedded_system\workspace\TKHTN_da_nhiem\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TKHTN_da_nhiem.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TKHTN_da_nhiem.elf
+ 
+arm-none-eabi-size   TKHTN_da_nhiem.elf 
+arm-none-eabi-objdump -h -S  TKHTN_da_nhiem.elf  > "TKHTN_da_nhiem.list"
+arm-none-eabi-objcopy  -O ihex  TKHTN_da_nhiem.elf  "TKHTN_da_nhiem.hex"
+   text	   data	    bss	    dec	    hex	filename
+  41840	    488	   8424	  50752	   c640	TKHTN_da_nhiem.elf
+arm-none-eabi-objcopy  -O binary  TKHTN_da_nhiem.elf  "TKHTN_da_nhiem.bin"
+Finished building: default.size.stdout
+ 
+Finished building: TKHTN_da_nhiem.hex
+Finished building: TKHTN_da_nhiem.bin
+ 
+ 
+Finished building: TKHTN_da_nhiem.list
+ 
+
+13:41:16 Build Finished. 0 errors, 1 warnings. (took 2s.680ms)
+
